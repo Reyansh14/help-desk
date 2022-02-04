@@ -1,0 +1,30 @@
+{
+  "name": "help-desk",
+  "version": "1.0.0",
+  "description": "Help Desk MERN App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reyansh14/help-desk.git"
+  },
+  "author": "Reyansh Patange",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Reyansh14/help-desk/issues"
+  },
+  "homepage": "https://github.com/Reyansh14/help-desk#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "mongoose": "^6.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
