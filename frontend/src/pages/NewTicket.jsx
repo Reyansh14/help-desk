@@ -1,12 +1,11 @@
 import React from 'react';
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 import {toast} from 'react-toastify'
 
 import {createTicket, reset} from '../features/tickets/ticketSlice'
 import Spinner from '../components/Spinner';
-import { useEffect } from 'react';
 import BackButton from '../components/BackButton'
 
 function NewTicket() {
@@ -35,6 +34,7 @@ function NewTicket() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    console.log(product)
     dispatch(createTicket({product, description}))
   }
 
