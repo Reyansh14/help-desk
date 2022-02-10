@@ -8,7 +8,7 @@ import Home from './pages/Home.jsx'
 import Login from './pages/Login.jsx'
 import Register from './pages/Register.jsx'
 import NewTicket from './pages/NewTicket.jsx';
-import { PrivateRoute } from './components/PrivateRoute.jsx';
+import PrivateRoute from './components/PrivateRoute.jsx';
 import Tickets from './pages/Tickets.jsx';
 import Ticket from './pages/Ticket.jsx'
 
