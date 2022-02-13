@@ -9,7 +9,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import {getTicket, closeTicket} from '../features/tickets/ticketSlice'
 import BackButton from '../components/BackButton';
 import Spinner from '../components/Spinner';
-import {getNotes, reset as notesReset} from '../features/notes/noteSlice'
+import {getNotes, createNote, reset as notesReset} from '../features/notes/noteSlice'
 import NoteItem from '../components/NoteItem'
 
 const customStyles = {
@@ -45,6 +45,7 @@ function Ticket() {
 
         dispatch(getTicket(ticketId))
         dispatch(getNotes(ticketId))
+        // eslint-disable-next-line
     }, [isError, message, ticketId])
 
     //close ticket
@@ -57,7 +58,7 @@ function Ticket() {
     //create note submit
     const handleNoteSubmit = (e) => {
         e.preventDefault()
-        console.log('Submit')
+        dispatch(createNote({noteText, ticketId}))
         closeModal()
     }
 

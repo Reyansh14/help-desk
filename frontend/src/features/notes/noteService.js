@@ -1,21 +1,42 @@
 import axios from 'axios'
 
-const api_url = '/api/tickets/'
+const API_URL = '/api/tickets/'
 
 // Get ticket notes
 const getNotes = async (ticketId, token) => {
-    const config = {
-        headers: {
-            Authorization: `Bearer ${token}`
-        }
-    }
-    const response = await axios.get(api_url + ticketId + '/notes', config)
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }
 
-    return response.data
+  const response = await axios.get(API_URL + ticketId + '/notes', config)
+
+  return response.data
+}
+
+// Create ticket note
+const createNote = async (noteText, ticketId, token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }
+
+  const response = await axios.post(
+    API_URL + ticketId + '/notes',
+    {
+      text: noteText,
+    },
+    config
+  )
+
+  return response.data
 }
 
 const noteService = {
-    getNotes
+  getNotes,
+  createNote,
 }
 
 export default noteService
