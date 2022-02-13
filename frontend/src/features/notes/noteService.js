@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const api_url = 'api/tickets/'
+const api_url = '/api/tickets/'
 
 // Get ticket notes
 const getNotes = async (ticketId, token) => {
