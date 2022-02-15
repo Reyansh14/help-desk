@@ -1,5 +1,7 @@
 # Help Desk
 
+![Help Desk Main Page](https://github.com/Reyansh14/help-desk/blob/main/help_desk1.PNG)
+
 ## View Live Project
 [Live Demo](https://reyhelpdesk.herokuapp.com/)
 
@@ -19,5 +21,32 @@ This project is built using the MERN stack and more:
  - bcrypt
  - Heroku
 
+## Usage
 
+Create a .env file, paste the following, and add your own MongoDB URI and JWT Secret:
+```
+NODE_ENV = development
+PORT = 5000
+MONGO_URI = mongodb+srv://youruri
+JWT_SECRET = enter_your_JWT_secret
+```
+Install your back-end dependencies:
+```
+npm install
+```
+Install your front-end dependencies:
+```
+cd frontend
+npm install
+```
+Run the application in development (both frontend & backend):
+```
+npm run dev
+```
+
+## Gallery
+
+![Help Desk Pic 2](https://github.com/Reyansh14/help-desk/blob/main/help_desk2.PNG)
+![Help Desk Pic 3](https://github.com/Reyansh14/help-desk/blob/main/help_desk3.PNG)
+![Help Desk Pic 4](https://github.com/Reyansh14/help-desk/blob/main/help_desk4.PNG)
 
